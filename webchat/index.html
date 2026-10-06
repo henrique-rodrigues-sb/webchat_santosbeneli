@@ -6,7 +6,7 @@
   <title>Atendimento online — Grupo Santos Beneli</title>
   <meta name="description" content="Canal oficial de atendimento online do Grupo Santos Beneli. Converse diretamente com nossa equipe.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#FAF8F2">
+  <meta name="theme-color" content="#08142E">
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +17,10 @@
       --bg:#FAF8F2; --bg-2:#F2EEE2; --surface:#FFFFFF;
       --navy:#08142E; --navy-2:#0D1F45; --navy-3:#17315F;
       --ink:#0F1419; --ink-2:#4A5260;
+      --ink-on-dark:#FAF8F2; --ink-on-dark-2:#B8C4D8;
       --gold:#D4A547; --gold-bright:#E8C36B; --gold-deep:#A87D2C;
       --line:rgba(15,20,25,.08);
+      --line-on-dark:rgba(250,248,242,.14);
       --display:'Bricolage Grotesque',system-ui,sans-serif;
       --serif:'Fraunces',Georgia,serif;
       --sans:'Plus Jakarta Sans',system-ui,sans-serif;
@@ -28,11 +30,11 @@
     }
     * { box-sizing:border-box; }
     html { min-height:100%; scroll-behavior:smooth; }
-    body { min-height:100%; margin:0; overflow-x:hidden; color:var(--ink); background:var(--bg); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+    body { min-height:100%; margin:0; overflow-x:hidden; color:var(--ink-on-dark); background:var(--navy); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
     a { color:inherit; text-decoration:none; }
-    a:focus-visible { outline:2px solid var(--navy-3); outline-offset:5px; }
+    a:focus-visible { outline:2px solid var(--gold-bright); outline-offset:5px; }
     svg { display:block; }
-    .page-header { position:relative; z-index:2; border-bottom:1px solid var(--line); background:var(--bg); }
+    .page-header { position:relative; z-index:2; border-bottom:1px solid var(--line-on-dark); background:var(--navy); }
     .header-inner { max-width:1340px; min-height:92px; margin:0 auto; padding:18px var(--pad); display:flex; align-items:center; justify-content:space-between; gap:24px; }
     .brand { display:inline-flex; align-items:center; gap:14px; flex:none; }
     /* Mesmo monograma SB limpo do site principal, sem barra. */
@@ -40,35 +42,37 @@
     .brand-mark::before { content:''; position:absolute; inset:7px; border:1px solid rgba(212,165,71,.18); border-radius:16px; }
     .brand-mark::after { content:'SB'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--navy); font-family:var(--display); font-size:25px; font-weight:760; line-height:1; letter-spacing:-.09em; }
     .brand-copy { display:flex; flex-direction:column; gap:4px; line-height:1; }
-    .brand-copy-top { color:#87601A; font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
-    .brand-copy-bottom { color:var(--navy); font-family:var(--display); font-size:29px; font-weight:620; line-height:.96; letter-spacing:-.045em; white-space:nowrap; }
-    .brand-copy-initial { position:relative; isolation:isolate; color:var(--gold-deep); font-weight:800; }
+    .brand-copy-top { color:var(--gold-bright); font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
+    .brand-copy-bottom { color:var(--ink-on-dark); font-family:var(--display); font-size:29px; font-weight:620; line-height:.96; letter-spacing:-.045em; white-space:nowrap; }
+    .brand-copy-initial { position:relative; isolation:isolate; color:var(--gold-bright); font-weight:800; }
     .brand-copy-initial::after { content:''; position:absolute; left:0; right:0; bottom:.04em; height:.11em; border-radius:99px; background:rgba(212,165,71,.23); z-index:-1; }
     .brand:hover .brand-mark { transform:translateY(-1px); border-color:rgba(184,135,39,.3); }
     .chat-top { display:flex; align-items:center; gap:12px; flex:none; }
-    .chat-top a { min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 16px; border:1px solid rgba(8,20,46,.14); border-radius:99px; color:var(--navy); font-size:12px; font-weight:700; transition:background .2s ease,border-color .2s ease; }
-    .chat-top a:hover { border-color:rgba(168,125,44,.35); background:var(--bg-2); }
-    .chat-top .privacy-link { border-color:transparent; color:var(--ink-2); }
+    .chat-top a { min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 16px; border:1px solid var(--line-on-dark); border-radius:99px; color:var(--ink-on-dark); font-size:12px; font-weight:700; transition:background .2s ease,border-color .2s ease; }
+    .chat-top a:hover { border-color:var(--gold); background:var(--navy-2); }
+    .chat-top .privacy-link { border-color:transparent; color:var(--ink-on-dark-2); }
     .back-link svg { width:15px; height:15px; flex:none; }
     .page { position:relative; max-width:1340px; min-height:calc(100vh - 92px); min-height:calc(100svh - 92px); margin:0 auto; padding:44px var(--pad); display:grid; grid-template-columns:minmax(0,1fr) minmax(350px,440px); align-items:center; gap:clamp(36px,6vw,84px); }
     .intro { min-width:0; }
     .intro-main { max-width:650px; }
-    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--ink-2); font-family:var(--mono); font-size:10px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--gold-bright); font-family:var(--mono); font-size:10px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; }
     .eyebrow::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--gold); flex:none; }
-    h1 { max-width:12ch; margin:25px 0; color:var(--navy); font-family:var(--display); font-size:clamp(56px,5.6vw,88px); font-weight:500; font-variation-settings:'opsz' 96; letter-spacing:-.035em; line-height:1.02; transition:color .32s ease; cursor:default; }
-    h1 em { color:var(--gold-deep); font-family:var(--serif); font-weight:300; font-style:italic; letter-spacing:-.04em; transition:color .32s ease; }
-    h1:hover { color:var(--gold-deep); }
-    h1:hover em { color:var(--navy-3); }
-    .lead { max-width:43ch; margin:0; color:var(--ink-2); font-size:17px; line-height:1.7; }
+    h1 { max-width:12ch; margin:25px 0; color:var(--ink-on-dark); font-family:var(--display); font-size:clamp(56px,5.6vw,88px); font-weight:500; font-variation-settings:'opsz' 96; letter-spacing:-.035em; line-height:1.02; cursor:default; }
+    h1 .title-word { display:inline-block; transition:color .24s ease; }
+    h1 .title-word:hover { color:var(--gold-bright); }
+    h1 em { color:var(--gold-bright); font-family:var(--serif); font-weight:300; font-style:italic; letter-spacing:-.04em; }
+    /* O azul-claro já usado no site mantém contraste sobre o mesmo navy. */
+    h1 .title-word--direct:hover { color:var(--ink-on-dark-2); }
+    .lead { max-width:43ch; margin:0; color:var(--ink-on-dark-2); font-size:17px; line-height:1.7; }
     .trust { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
-    .trust span { display:inline-flex; align-items:center; gap:7px; padding:9px 12px; border:1px solid rgba(8,20,46,.1); border-radius:99px; color:var(--ink-2); font-size:11px; font-weight:600; }
-    .trust span::before { content:'✓'; color:#87601A; }
-    .official { margin-top:40px; padding-top:22px; border-top:1px solid var(--line); display:grid; gap:10px; }
-    .official-label { color:var(--ink-2); font-family:var(--mono); font-size:9px; letter-spacing:.15em; text-transform:uppercase; }
-    .official-links { display:flex; flex-wrap:wrap; gap:10px 18px; color:var(--navy); font-size:12px; }
-    .official-links a:hover { color:#87601A; text-decoration:underline; text-underline-offset:4px; }
+    .trust span { display:inline-flex; align-items:center; gap:7px; padding:9px 12px; border:1px solid var(--line-on-dark); border-radius:99px; color:var(--ink-on-dark-2); font-size:11px; font-weight:600; }
+    .trust span::before { content:'✓'; color:var(--gold-bright); }
+    .official { margin-top:40px; padding-top:22px; border-top:1px solid var(--line-on-dark); display:grid; gap:10px; }
+    .official-label { color:var(--ink-on-dark-2); font-family:var(--mono); font-size:9px; letter-spacing:.15em; text-transform:uppercase; }
+    .official-links { display:flex; flex-wrap:wrap; gap:10px 18px; color:var(--ink-on-dark); font-size:12px; }
+    .official-links a:hover { color:var(--gold-bright); text-decoration:underline; text-underline-offset:4px; }
     .chat-side { min-width:0; width:100%; justify-self:center; }
-    .frame-shell { position:relative; width:100%; overflow:hidden; border:1px solid rgba(8,20,46,.12); border-radius:24px; background:var(--surface); box-shadow:0 24px 70px -35px rgba(8,20,46,.28),0 5px 16px -12px rgba(8,20,46,.16); }
+    .frame-shell { position:relative; width:100%; overflow:hidden; border:1px solid var(--line-on-dark); border-radius:24px; background:var(--surface); box-shadow:0 32px 80px -28px rgba(0,0,0,.4); }
     /* Altura mínima preserva os campos do fornecedor; a página externa pode rolar. */
     iframe { position:relative; display:block; width:100%; height:var(--frame-height); min-height:640px; border:0; background:var(--surface); opacity:0; transition:opacity .2s ease; }
     .frame-shell.is-ready iframe { opacity:1; }
@@ -76,8 +80,8 @@
     .loader span { width:30px; height:30px; border:3px solid rgba(8,20,46,.12); border-top-color:var(--gold-deep); border-radius:50%; animation:spin .8s linear infinite; }
     .loader p { margin:0; }
     .frame-shell.is-ready .loader { display:none; }
-    .chat-help { margin:15px 8px 0; color:var(--ink-2); font-size:11px; line-height:1.7; text-align:center; }
-    .chat-help a { color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
+    .chat-help { margin:15px 8px 0; color:var(--ink-on-dark-2); font-size:11px; line-height:1.7; text-align:center; }
+    .chat-help a { display:inline-flex; align-items:center; min-height:32px; color:var(--ink-on-dark); text-decoration:underline; text-underline-offset:3px; }
     .mobile-privacy { display:none; }
     .noscript { margin:20px; padding:16px; color:var(--navy); background:var(--bg-2); text-align:center; }
     .noscript a { text-decoration:underline; }
@@ -110,17 +114,16 @@
       .back-link .link-label { display:none; }
       .back-link svg { width:18px; height:18px; }
       .intro { display:none; }
-      .page { display:block; min-height:0; padding:0 0 max(16px,env(safe-area-inset-bottom)); background:var(--surface); }
+      .page { display:block; min-height:0; padding:12px 12px max(16px,env(safe-area-inset-bottom)); background:var(--navy); }
       .chat-side { max-width:520px; margin:0 auto; }
-      .frame-shell { border:0; border-radius:0; box-shadow:none; }
-      .chat-help { margin:12px 18px 0; }
+      .frame-shell { border:1px solid var(--line-on-dark); border-radius:16px; box-shadow:none; }
+      .chat-help { margin:10px 6px 0; }
       .mobile-privacy { display:block; }
       .mobile-privacy a { display:inline-flex; align-items:center; min-height:44px; }
-      body { background:var(--surface); }
     }
     @media(prefers-reduced-motion:reduce) {
       html { scroll-behavior:auto; }
-      iframe,h1,h1 em,.brand-mark,.chat-top a { transition:none; }
+      iframe,h1 .title-word,.brand-mark,.chat-top a { transition:none; }
       .loader span { animation:none; }
     }
   </style>
@@ -148,7 +151,7 @@
     <aside class="intro">
       <div class="intro-main">
         <span class="eyebrow">Atendimento online · Canal oficial</span>
-        <h1>Uma conversa <em>direta</em> com nossa equipe.</h1>
+        <h1><span class="title-word">Uma</span> <span class="title-word">conversa</span> <em class="title-word title-word--direct">direta</em> <span class="title-word">com</span> <span class="title-word">nossa</span> <span class="title-word">equipe.</span></h1>
         <p class="lead">Use o atendimento online para tirar dúvidas e dar continuidade ao seu contato em um ambiente simples e seguro.</p>
         <div class="trust" aria-label="Características do canal">
           <span>Atendimento pelo site</span>
@@ -167,12 +170,12 @@
     <section class="chat-side" aria-label="Atendimento via ChatWeb">
       <div class="frame-shell" id="frame-shell">
         <div class="loader" aria-live="polite"><span aria-hidden="true"></span><p>Carregando atendimento…</p></div>
-        <iframe id="webchat-frame" title="Chat de atendimento Santos Beneli" src="https://webchat.flw.chat/wc/w/sb-chat-71258e?pc=%2308142E" referrerpolicy="strict-origin-when-cross-origin" allow="clipboard-write"></iframe>
+        <iframe id="webchat-frame" title="Chat de atendimento Santos Beneli" src="https://webchat.flw.chat/wc/w/sb-chat-71258e?pc=%2308142E" referrerpolicy="strict-origin-when-cross-origin" allow="microphone https://webchat.flw.chat; clipboard-write"></iframe>
       </div>
-      <p class="chat-help">Se o atendimento não carregar, <a href="https://webchat.flw.chat/wc/w/sb-chat-71258e?pc=%2308142E" target="_blank" rel="noopener">abra em nova aba</a>.<span class="mobile-privacy"><a href="https://santosbeneli.com.br/politica-de-privacidade.html">Política de Privacidade</a></span></p>
+      <p class="chat-help">Canal oficial Santos Beneli · <a href="https://chat.santosbeneli.com.br/webchat/" target="_blank" rel="noopener">Abrir em nova aba</a><span class="mobile-privacy"><a href="https://santosbeneli.com.br/politica-de-privacidade.html">Política de Privacidade</a></span></p>
     </section>
   </main>
-  <noscript><p class="noscript">Ative o JavaScript ou <a href="https://webchat.flw.chat/wc/w/sb-chat-71258e?pc=%2308142E">abra o atendimento diretamente</a>.</p></noscript>
+  <noscript><p class="noscript">Ative o JavaScript no navegador para iniciar o atendimento. Se precisar, ligue para <a href="tel:08005000086">0800 500 0086</a>.</p></noscript>
   <script>
     (() => {
       const frameShell = document.getElementById('frame-shell');
